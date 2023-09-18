@@ -1,8 +1,15 @@
 # ~/.config/starship.toml
 
+#General
 add_newline = true
 command_timeout = 1000
 format = """$os$username$hostname$kubernetes$directory$git_branch$git_status"""
+
+# Duration
+[cmd_duration]
+min_time = 10_000  # Show command duration over 10,000 milliseconds (= 10 sec)
+format = "took [$duration]($style)"
+
 
 # Drop ugly default prompt characters
 [character]
@@ -112,9 +119,24 @@ detect_folders = ["node_modules"]
 disabled = true
 
 [terraform]
-disabled = true
+format = "[🏎💨 $version$workspace]($style) "
 
 [battery]
 full_symbol = "🔋"
 charging_symbol = "⚡️"
 discharging_symbol = "💀"
+
+# Clear visibility for exit codes
+[status]
+style = "bg:red"
+symbol = "💣 "
+format = '[\[$symbol$status\]]($style) '
+disabled = false
+
+[aws]
+format = '[$symbol$profile(\($region\))]($style) '
+style = "bold yellow"
+symbol = "∀⍵₷☁️☁️"
+[aws.region_aliases]
+ap-southeast-2 = "au"
+us-east-1 = "va"
