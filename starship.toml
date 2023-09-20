@@ -23,11 +23,45 @@ format = '[$symbol](bold white) '
 disabled = false
 
 [os.symbols]
-Windows = ''
-Arch = '󰣇'
-Ubuntu = ''
-Macos = '󰀵'
-
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = " "
 # ---
 
 # Shows the username
@@ -42,11 +76,11 @@ show_always = true
 [hostname]
 ssh_only = false
 format = 'on [$hostname](bold yellow) '
-disabled = false
+disabled = true
 
 # Shows current directory
 [directory]
-truncation_length = 1
+truncation_length = 10
 truncation_symbol = '…/'
 home_symbol = '󰋜 ~'
 read_only_style = '197'
@@ -57,7 +91,7 @@ format = 'at [$path]($style)[$read_only]($read_only_style) '
 [git_branch]
 symbol = ' '
 format = 'via [$symbol$branch]($style)'
-# truncation_length = 4
+truncation_length = 10
 truncation_symbol = '…/'
 style = 'bold green'
 
